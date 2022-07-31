@@ -1,0 +1,16 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 3:47:34 On 9. 5. 2022
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [PCB_24V_PWR.PcbDoc]
+   Generated File[PCB_24V_PWR.TXT]
+   Generated File[PCB_24V_PWR.LDP]
+   Generated File[PCB_24V_PWR.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 3:47:34 On 9. 5. 2022

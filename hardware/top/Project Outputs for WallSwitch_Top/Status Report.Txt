@@ -1,0 +1,16 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 3:37:02 On 9. 5. 2022
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [PCB_WallSwitch_TOP.PcbDoc]
+   Generated File[PCB_WallSwitch_TOP.TXT]
+   Generated File[PCB_WallSwitch_TOP.LDP]
+   Generated File[PCB_WallSwitch_TOP.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 3:37:02 On 9. 5. 2022

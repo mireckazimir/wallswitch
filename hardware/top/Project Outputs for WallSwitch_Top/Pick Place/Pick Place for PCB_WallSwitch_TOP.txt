@@ -1,0 +1,41 @@
+Altium Designer Pick and Place Locations
+F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_Top\Project Outputs for WallSwitch_Top\Pick Place\Pick Place for PCB_WallSwitch_TOP.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       08/05/22
+Time:       03:26
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment            Layer       Footprint                        Center-X(mil) Center-Y(mil) Rotation Description                                                                       
+C5         C0805C104K5RAC7411 TopLayer    FP-C0805C-DN-IPC_A               1283.465      1051.181      180      "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                          
+D4         IN-S85AT5B         TopLayer    LEDC2012X110N                    2468.504      110.236       180      "Led Blue Clear 0805 SMD"                                                         
+D3         IN-S85AT5B         TopLayer    LEDC2012X110N                    279.528       106.299       0        "Led Blue Clear 0805 SMD"                                                         
+D2         IN-S85AT5B         TopLayer    LEDC2012X110N                    2468.504      1763.780      180      "Led Blue Clear 0805 SMD"                                                         
+D1         IN-S85AT5B         TopLayer    LEDC2012X110N                    279.528       1763.780      0        "Led Blue Clear 0805 SMD"                                                         
+R10        ESR10EZPJ820       TopLayer    FP-ESR10-IPC_A                   2303.150      862.205       180      "Res Thick Film 0805 82 Ohm 5% 0.4W ±200ppm/C Epoxy Resin Pad SMD Automotive T/R" 
+R9         ESR10EZPJ820       TopLayer    FP-ESR10-IPC_A                   460.630       893.701       0        "Res Thick Film 0805 82 Ohm 5% 0.4W ±200ppm/C Epoxy Resin Pad SMD Automotive T/R" 
+R8         ESR10EZPJ820       TopLayer    FP-ESR10-IPC_A                   2303.150      964.567       180      "Res Thick Film 0805 82 Ohm 5% 0.4W ±200ppm/C Epoxy Resin Pad SMD Automotive T/R" 
+R7         ESR10EZPJ820       TopLayer    FP-ESR10-IPC_A                   460.630       1000.000      0        "Res Thick Film 0805 82 Ohm 5% 0.4W ±200ppm/C Epoxy Resin Pad SMD Automotive T/R" 
+SW4        B3F-4000           TopLayer    FP-B3F-4000-MFG                  2472.441      484.252       270      "SWITCH TACTILE SPST-NO 0.05A 24V"                                                
+SW3        B3F-4000           TopLayer    FP-B3F-4000-MFG                  283.465       484.252       270      "SWITCH TACTILE SPST-NO 0.05A 24V"                                                
+SW2        B3F-4000           TopLayer    FP-B3F-4000-MFG                  2472.441      1405.512      90       "SWITCH TACTILE SPST-NO 0.05A 24V"                                                
+SW1        B3F-4000           TopLayer    FP-B3F-4000-MFG                  283.465       1405.512      90       "SWITCH TACTILE SPST-NO 0.05A 24V"                                                
+R6         ERJ-UP6J103V       TopLayer    RESC2012X70N                     1283.465      1381.890      180      "Res 10K Ohm 5% 1/2W 0805"                                                        
+R5         ERJ-UP6J103V       TopLayer    RESC2012X70N                     1283.465      1303.150      180      "Res 10K Ohm 5% 1/2W 0805"                                                        
+R4         ERJ-UP6J103V       TopLayer    RESC2012X70N                     1283.465      1224.409      180      "Res 10K Ohm 5% 1/2W 0805"                                                        
+R3         ERJ-UP6J103V       TopLayer    RESC2012X70N                     1283.465      1145.669      180      "Res 10K Ohm 5% 1/2W 0805"                                                        
+C4         C0805C104K5RAC7411 TopLayer    FP-C0805C-DN-IPC_A               988.189       1377.953      0        "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                          
+C3         C0805C104K5RAC7411 TopLayer    FP-C0805C-DN-IPC_A               988.189       1267.717      0        "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                          
+C2         C0805C104K5RAC7411 TopLayer    FP-C0805C-DN-IPC_A               988.189       1157.480      0        "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                          
+C1         C0805C104K5RAC7411 TopLayer    FP-C0805C-DN-IPC_A               988.220       1047.244      0        "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                          
+U1         SCD40-D-R2         TopLayer    SCD4x                            1376.476      681.102       0        "SCD40-D-R2 CO2 Sensor I2C, SMD ToR 600 pcs"                                      
+R2         RCC12062K20FKEA    TopLayer    RCC1206_e3                       1724.409      1220.473      180      "Res, Aec-Q200, 2K2, 1%, 0.5W, 1206 Rohs Compliant: Yes"                          
+R1         RCC12062K20FKEA    TopLayer    RCC1206_e3                       1724.409      1362.205      180      "Res, Aec-Q200, 2K2, 1%, 0.5W, 1206 Rohs Compliant: Yes"                          
+P4         M22-2010805        BottomLayer HDRV8W60P0X200_1X8_1600X200X525P 1377.953      307.087       180      "Connector, Header, 8Pos, 1Row, 2Mm Rohs Compliant: Yes"                          
+P3         M20-9770446        BottomLayer HDRV4W64P0X254_1X4_1016X254X834P 1379.134      70.866        180      "04 SIL VERT PIN HDR"                                                             
+P2         SSQ-108-01-T-D     BottomLayer SAMTEC_SSQ-108-XX-X-D            2062.992      1003.937      90       "Headers & Wire Housings Tiger Buy Socket Strip with Square Tails, 0.100 Pitch"   
+P1         SSQ-108-01-T-D     BottomLayer SAMTEC_SSQ-108-XX-X-D            692.913       1003.937      90       "Headers & Wire Housings Tiger Buy Socket Strip with Square Tails, 0.100 Pitch"   

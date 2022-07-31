@@ -1,0 +1,55 @@
+Net Status Report
+Filename     : F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc
+Date         : 7. 5. 2022
+Time         : 0:46:59
+Time Elapsed : 00:00:01
+
+Nets, Layer, Length
+    3V3, Signal Layers Only, 11.5524mm
+    5V, Signal Layers Only, 0mm
+    5VEXT, Signal Layers Only, 42.2705mm
+    DTR, Signal Layers Only, 19.1655mm
+    EN, Signal Layers Only, 35.6821mm
+    GND, Signal Layers Only, 72.8643mm
+    GPIO12, Signal Layers Only, 11.8088mm
+    GPIO13, Signal Layers Only, 14.6123mm
+    GPIO14, Signal Layers Only, 8.7428mm
+    GPIO15, Signal Layers Only, 13.7602mm
+    GPIO16, Signal Layers Only, 8.2167mm
+    GPIO17, Signal Layers Only, 11.2828mm
+    GPIO2, Signal Layers Only, 14.4959mm
+    GPIO21, Signal Layers Only, 11.8088mm
+    GPIO22, Signal Layers Only, 9.7949mm
+    GPIO25, Signal Layers Only, 11.8088mm
+    GPIO26, Signal Layers Only, 8.7428mm
+    GPIO27, Signal Layers Only, 11.8088mm
+    GPIO32, Signal Layers Only, 11.8088mm
+    GPIO33, Signal Layers Only, 8.7428mm
+    GPIO34, Signal Layers Only, 12.5073mm
+    GPIO35, Signal Layers Only, 8.9182mm
+    GPIO36, Signal Layers Only, 14.391mm
+    GPIO39, Signal Layers Only, 10.2895mm
+    GPIO4, Signal Layers Only, 11.2828mm
+    IO0, Signal Layers Only, 35.4789mm
+    NetC9_1, Signal Layers Only, 8.1421mm
+    NetFB1_2, Signal Layers Only, 0mm
+    NetQ1_1, Signal Layers Only, 2.3202mm
+    NetQ2_1, Signal Layers Only, 2.3202mm
+    NetR12_2, Signal Layers Only, 4.5923mm
+    RTS, Signal Layers Only, 23.5917mm
+    RXD_0, Signal Layers Only, 17.9857mm
+    RXD_1, Signal Layers Only, 8.6731mm
+    SPI_CLK, Signal Layers Only, 11.2828mm
+    SPI_CS, Signal Layers Only, 8.2167mm
+    SPI_MISO, Signal Layers Only, 8.2167mm
+    SPI_MOSI, Signal Layers Only, 12.8609mm
+    TXD_0, Signal Layers Only, 15.6265mm
+    TXD_1, Signal Layers Only, 6.9034mm
+    USB_D0_N, Signal Layers Only, 6.056mm
+    USB_D0_P, Signal Layers Only, 5.1381mm
+    USB_D1_N, Signal Layers Only, 15.0525mm
+    USB_D1_P, Signal Layers Only, 12.6525mm
+    USB_D_N, Signal Layers Only, 5.0562mm
+    USB_D_P, Signal Layers Only, 5.313mm
+    USB_VBUS, Signal Layers Only, 20.0189mm
+count : 47

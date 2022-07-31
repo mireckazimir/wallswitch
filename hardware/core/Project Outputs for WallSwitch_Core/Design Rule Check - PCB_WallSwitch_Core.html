@@ -1,0 +1,480 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9. 5. 2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5:09:32</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc" class="file"><acronym title="F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc">F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">44</td></tr>
+</table>
+</td>
+</table><a name="IDQX5ZNKVEZMXBIGY3QGXEVLSX4QJB3BHYE11XJL3RMO0VHXVGAVH"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2PG0M5RR3XLBLTWX1RAIQO13MFNT4ECUSGKPECP30GAM3YBJR2XK">Clearance Constraint (Gap=0.2mm) (OnLayer('Top Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNZCQU2SSZT4PM4MBQLG0SSWUHH210ZN1C1GWCIEQCYIAB3DTW5HJ">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBASN13YT5USAJICW1FYNUERIVCWX42EVLJVV3JGP4HDVTEMZNBZI">Clearance Constraint (Gap=0.2mm) (OnLayer('Bottom Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKO4PKSGYCQBEEHI5SGDKN1FELPKB5WKVGJW0CFRK1HHA2ZOL1KM">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0KZ2CFQ2DKQVKMMGA0XNNLRP1LBXZVKVPS4CD3F05WIXEV2PEDQM">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDI0YRBKU4JVCIBEK0CXJMO02QIHFNT2RJA0EWE3JRPMUMYI4UCYNB">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSPU5UISQJBQHOVLHRUTWOC2HDYQQWJGNJDFCJCLFO05WWS4ZORH">Width Constraint (Min=0.089mm) (Max=2.54mm) (Preferred=0.381mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF2GB0BDXXBHVGDZL3LW3LOZWGKEK02JVTC05TQNW3ECXRCR0UQNJ">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTTJRHVJXTH4QDSB1QMKC1Q50VJX3L5JZ51BEHWK3A1C55ZMCODOK">Minimum Annular Ring (Minimum=0.076mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOBVJGGWJW5PWDG3JCCWRG0IYZIS20L4IEC5PIKNCYAXJUDXAVR3H">Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1ST2Z5IFJFA4CQLW0MUEKIGENILF1CYORBZ5LAMZVQX5GLUE4N0G">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDI3WFYATWYO1BPJTRD0PKPAXVCIT50MUZJDUIP4J3Z0OINW1L2V3I">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">41</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDESNJBP3US1DSEBNHX1NFOUXRJCLHHEQVRGUXJDJOUJFDJKNDVGBD">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5QFZCUOGAXN0NKNTJ5UVXCCRWF3EKN40T1LDASLKCTHA33DC0S0N">Silk to Silk (Clearance=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOVHBHRLZCOIWOEIDYJSISJPOCB0QUFWKEG0FYAFLDCB4ZI0NFMUL">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4FUGUVKFIY4QGMVLC53L5ECY0P3IWH14SPNSW1IOAXC3YZAKSCFK">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZG5X4CQ11XXAPBD033VEG0FFECMLVMCZM1LSVOHKH1Q4YNBSU4SO">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">44</td>
+</tr>
+</table><br><a name="IDI3WFYATWYO1BPJTRD0PKPAXVCIT50MUZJDUIP4J3Z0OINW1L2V3I"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1746.422mil|Location2.X=1751.609mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1746.422mil|Location2.X=1751.609mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.1mm) Between Pad J1-1(16.7mm,2mm) on Top Layer And Pad J1-2(17.35mm,2mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1772.013mil|Location2.X=1777.2mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1772.013mil|Location2.X=1777.2mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.1mm) Between Pad J1-2(17.35mm,2mm) on Top Layer And Pad J1-3(18mm,2mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1797.603mil|Location2.X=1802.79mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1797.603mil|Location2.X=1802.79mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.1mm) Between Pad J1-3(18mm,2mm) on Top Layer And Pad J1-4(18.65mm,2mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1823.194mil|Location2.X=1828.381mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1823.194mil|Location2.X=1828.381mil|Location1.Y=1143.013mil|Location2.Y=1148.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.1mm) Between Pad J1-4(18.65mm,2mm) on Top Layer And Pad J1-5(19.3mm,2mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1597.407mil|Location2.Y=1602.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1597.407mil|Location2.Y=1602.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-1(26.975mm,13.057mm) on Top Layer And Pad U2-2(26.975mm,12.422mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1397.407mil|Location2.Y=1402.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1397.407mil|Location2.Y=1402.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-10(26.975mm,7.342mm) on Top Layer And Pad U2-9(26.975mm,7.977mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1397.407mil|Location2.Y=1402.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1397.407mil|Location2.Y=1402.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-11(31.625mm,7.342mm) on Top Layer And Pad U2-12(31.625mm,7.977mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1422.407mil|Location2.Y=1427.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1422.407mil|Location2.Y=1427.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-12(31.625mm,7.977mm) on Top Layer And Pad U2-13(31.625mm,8.612mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1447.407mil|Location2.Y=1452.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1447.407mil|Location2.Y=1452.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-13(31.625mm,8.612mm) on Top Layer And Pad U2-14(31.625mm,9.247mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1472.407mil|Location2.Y=1477.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1472.407mil|Location2.Y=1477.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-14(31.625mm,9.247mm) on Top Layer And Pad U2-15(31.625mm,9.882mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-15(31.625mm,9.882mm) on Top Layer And Pad U2-16(31.625mm,10.517mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1522.407mil|Location2.Y=1527.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1522.407mil|Location2.Y=1527.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-16(31.625mm,10.517mm) on Top Layer And Pad U2-17(31.625mm,11.152mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1547.407mil|Location2.Y=1552.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1547.407mil|Location2.Y=1552.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-17(31.625mm,11.152mm) on Top Layer And Pad U2-18(31.625mm,11.787mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2277.902mil|Location2.X=2283.089mil|Location1.Y=1536.572mil|Location2.Y=1541.759mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2277.902mil|Location2.X=2283.089mil|Location1.Y=1536.572mil|Location2.Y=1541.759mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.053mm &lt; 0.1mm) Between Pad U2-17(31.625mm,11.152mm) on Top Layer And Via (30.1mm,11.25mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.053mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1572.407mil|Location2.Y=1577.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1572.407mil|Location2.Y=1577.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-18(31.625mm,11.787mm) on Top Layer And Pad U2-19(31.625mm,12.422mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1597.407mil|Location2.Y=1602.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2351.737mil|Location2.X=2356.924mil|Location1.Y=1597.407mil|Location2.Y=1602.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-19(31.625mm,12.422mm) on Top Layer And Pad U2-20(31.625mm,13.057mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1572.407mil|Location2.Y=1577.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1572.407mil|Location2.Y=1577.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-2(26.975mm,12.422mm) on Top Layer And Pad U2-3(26.975mm,11.787mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1547.407mil|Location2.Y=1552.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1547.407mil|Location2.Y=1552.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-3(26.975mm,11.787mm) on Top Layer And Pad U2-4(26.975mm,11.152mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1522.407mil|Location2.Y=1527.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1522.407mil|Location2.Y=1527.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-4(26.975mm,11.152mm) on Top Layer And Pad U2-5(26.975mm,10.517mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-5(26.975mm,10.517mm) on Top Layer And Pad U2-6(26.975mm,9.882mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1472.407mil|Location2.Y=1477.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1472.407mil|Location2.Y=1477.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-6(26.975mm,9.882mm) on Top Layer And Pad U2-7(26.975mm,9.247mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1447.407mil|Location2.Y=1452.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1447.407mil|Location2.Y=1452.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-7(26.975mm,9.247mm) on Top Layer And Pad U2-8(26.975mm,8.612mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1422.407mil|Location2.Y=1427.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.666mil|Location2.X=2173.853mil|Location1.Y=1422.407mil|Location2.Y=1427.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.1mm) Between Pad U2-8(26.975mm,8.612mm) on Top Layer And Pad U2-9(26.975mm,7.977mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1574.178mil|Location2.Y=1579.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1574.178mil|Location2.Y=1579.365mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-1(8.675mm,12.475mm) on Top Layer And Pad U4-2(8.675mm,11.825mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1369.454mil|Location2.Y=1374.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1369.454mil|Location2.Y=1374.641mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-10(8.675mm,6.625mm) on Top Layer And Pad U4-9(8.675mm,7.275mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1369.454mil|Location2.Y=1374.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1369.454mil|Location2.Y=1374.641mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-11(14.425mm,6.625mm) on Top Layer And Pad U4-12(14.425mm,7.275mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1395.044mil|Location2.Y=1400.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1395.044mil|Location2.Y=1400.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-12(14.425mm,7.275mm) on Top Layer And Pad U4-13(14.425mm,7.925mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1420.635mil|Location2.Y=1425.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1420.635mil|Location2.Y=1425.822mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-13(14.425mm,7.925mm) on Top Layer And Pad U4-14(14.425mm,8.575mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1446.225mil|Location2.Y=1451.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1446.225mil|Location2.Y=1451.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-14(14.425mm,8.575mm) on Top Layer And Pad U4-15(14.425mm,9.225mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1471.816mil|Location2.Y=1477.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1471.816mil|Location2.Y=1477.003mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-15(14.425mm,9.225mm) on Top Layer And Pad U4-16(14.425mm,9.875mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-16(14.425mm,9.875mm) on Top Layer And Pad U4-17(14.425mm,10.525mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1522.997mil|Location2.Y=1528.184mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1522.997mil|Location2.Y=1528.184mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-17(14.425mm,10.525mm) on Top Layer And Pad U4-18(14.425mm,11.175mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1548.588mil|Location2.Y=1553.775mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1548.588mil|Location2.Y=1553.775mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-18(14.425mm,11.175mm) on Top Layer And Pad U4-19(14.425mm,11.825mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1574.178mil|Location2.Y=1579.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1621.452mil|Location2.X=1626.639mil|Location1.Y=1574.178mil|Location2.Y=1579.365mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-19(14.425mm,11.825mm) on Top Layer And Pad U4-20(14.425mm,12.475mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1548.588mil|Location2.Y=1553.775mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1548.588mil|Location2.Y=1553.775mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-2(8.675mm,11.825mm) on Top Layer And Pad U4-3(8.675mm,11.175mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1522.997mil|Location2.Y=1528.184mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1522.997mil|Location2.Y=1528.184mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-3(8.675mm,11.175mm) on Top Layer And Pad U4-4(8.675mm,10.525mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1497.407mil|Location2.Y=1502.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-4(8.675mm,10.525mm) on Top Layer And Pad U4-5(8.675mm,9.875mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1471.816mil|Location2.Y=1477.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1471.816mil|Location2.Y=1477.003mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-5(8.675mm,9.875mm) on Top Layer And Pad U4-6(8.675mm,9.225mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1446.225mil|Location2.Y=1451.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1446.225mil|Location2.Y=1451.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-6(8.675mm,9.225mm) on Top Layer And Pad U4-7(8.675mm,8.575mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1420.635mil|Location2.Y=1425.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1420.635mil|Location2.Y=1425.822mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-7(8.675mm,8.575mm) on Top Layer And Pad U4-8(8.675mm,7.925mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1395.044mil|Location2.Y=1400.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395.074mil|Location2.X=1400.261mil|Location1.Y=1395.044mil|Location2.Y=1400.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.1mm) Between Pad U4-8(8.675mm,7.925mm) on Top Layer And Pad U4-9(8.675mm,7.275mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4FUGUVKFIY4QGMVLC53L5ECY0P3IWH14SPNSW1IOAXC3YZAKSCFK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.616mil|Location2.X=1631.865mil|Location1.Y=975.592mil|Location2.Y=981.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.616mil|Location2.X=1631.865mil|Location1.Y=975.592mil|Location2.Y=981.841mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (13.97mm,-3mm)(13.97mm,-2.2mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1784.277mil|Location2.X=1790.526mil|Location1.Y=975.592mil|Location2.Y=981.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1784.277mil|Location2.X=1790.526mil|Location1.Y=975.592mil|Location2.Y=981.841mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (13.97mm,-3mm)(22.03mm,-3mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1942.938mil|Location2.X=1949.188mil|Location1.Y=975.592mil|Location2.Y=981.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\PCB_WallSwitch_Core.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1942.938mil|Location2.X=1949.188mil|Location1.Y=975.592mil|Location2.Y=981.841mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (22.03mm,-3mm)(22.03mm,-2.2mm) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

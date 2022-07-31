@@ -1,0 +1,33 @@
+Altium Designer Pick and Place Locations
+F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_24V\Project Outputs for WallSwitch_24V\Pick Place\Pick Place for PCB_24V_PWR.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/05/22
+Time:       03:47
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment             Layer       Footprint              Center-X(mil) Center-Y(mil) Rotation Description                                                                                          
+D1         SS2PH10-M3/84A      TopLayer    DO-220AA               1208.661      569.902       90       "DIODE SCHOTTKY 100V 2A DO220AA"                                                                     
+P2         TSW-108-07-T-D      TopLayer    SAMTEC_TSW-108-07-T-D  1492.126      606.299       90       "Conn Unshrouded Header HDR 16 POS 2.54mm Solder ST Thru-Hole Bulk"                                  
+P1         TSW-108-07-T-D      TopLayer    SAMTEC_TSW-108-07-T-D  122.047       606.299       90       "Conn Unshrouded Header HDR 16 POS 2.54mm Solder ST Thru-Hole Bulk"                                  
+J1         1729018             BottomLayer 1729018                1023.622      1047.244      0        "??5mm 2pin 10A 300V ??? ??? ??"                                                                     
+U1         TPS54233D           TopLayer    D0008A_L               807.087       744.095       270      "3.5 to 28V Input, 2A, 300kHz Step-Down Converter with Eco-mode 8-SOIC -40 to 150"                   
+R6         CRCW08051K96FKEA    TopLayer    RESC2013X50X30LL20T20  614.173       594.488       90       "Res Thick Film 0805 1.96K Ohm 1% 1/8W ±100ppm/°C Molded SMD SMD Paper T/R"                          
+R5         CR0805-FX-1022ELF   TopLayer    RESC2012X60N           448.819       429.134       90       "Res Thick Film 0805 10.2K Ohm 1% 1/8W ±100ppm/°C Molded SMD SMD Paper Tape on Plastic Reel"         
+R1         ERJ-6ENF1693V       TopLayer    RESC2013X70X40LL20T20  637.795       948.819       270      "Res Thick Film 0805 169K Ohm 1% 1/8W ±100ppm/°C Molded SMD Punched Carrier T/R"                     
+R2         CR0805-FX-3572ELF   TopLayer    RESC0805(2012)_L       637.795       818.898       270      "Res Thick Film 0805 35.7K Ohm 1% 1/8W 100ppm/C Molded SMD SMD Paper Tape on Plastic Reel"           
+R4         CR0805-FX-2212ELF   TopLayer    RESC2012X60N           614.173       429.134       270      "Res Thick Film 0805 22.1K Ohm 1% 1/8W ±100ppm/°C Molded SMD SMD Paper Tape on Plastic Reel"         
+L1         SRR1260-470M        BottomLayer SRR1260470M            1082.677      399.606       180      "Inductor Power Shielded Wirewound 47uH 20% 100KHz 22Q-Factor Ferrite 2.6A 86mOhm DCR T/R"           
+C9         C3216X5R1A686M160AC BottomLayer FP-C3216-160-0_3-IPC_A 653.543       283.465       90       "C Series 1206 68 uF 10 V ±20 % Tolerance X5R SMT Multilayer Ceramic Capacitor"                      
+C8         C3216X5R1A686M160AC BottomLayer FP-C3216-160-0_3-IPC_A 515.748       283.465       90       "C Series 1206 68 uF 10 V ±20 % Tolerance X5R SMT Multilayer Ceramic Capacitor"                      
+C7         C3216X5R1A686M160AC BottomLayer FP-C3216-160-0_3-IPC_A 377.953       283.465       90       "C Series 1206 68 uF 10 V ±20 % Tolerance X5R SMT Multilayer Ceramic Capacitor"                      
+C6         C0805C104K8RACTU    TopLayer    FP-C0805C-DN-IPC_A     1023.622      653.543       180      "Cap Ceramic 0.1uF 10V X7R 10% SMD 0805 125°C Paper T/R"                                             
+C2         C1210C106M5RACTU    TopLayer    FP-C3225-250-0_4-IPC_A 421.260       1145.669      180      "3225 C 10uF Ceramic Multilayer Capacitor; 50 V; +85degC; X7R Dielectric; +/-20%"                    
+C1         C1210C106M5RACTU    TopLayer    FP-C3225-250-0_4-IPC_A 421.260       1000.000      180      "3225 C 10uF Ceramic Multilayer Capacitor; 50 V; +85degC; X7R Dielectric; +/-20%"                    
+C3         C0805C100J5GACTU    TopLayer    FP-C0805C-DN-IPC_A     748.032       488.189       0        "Cap Ceramic 10pF 50V C0G 5% SMD 0805 125C Plastic T/R"                                              
+C4         C2012C0G1H272J060AA TopLayer    FP-C2012-060-0_2-IPC_A 748.032       370.079       0        "Cap Ceramic 0.0027uF 50V C0G 5% SMD 0805 125C Paper T/R"                                            
+C5         C0805C822K4RACTU    BottomLayer FP-C0805C-DN-IPC_A     629.921       921.260       180      "Capacitor, Ceramic, 8.2nF, 16VDC, 10-% Tol, 10+% Tol, X7R-TC Code, -15, 15%-TC RoHS Compliant: Yes" 

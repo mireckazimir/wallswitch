@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: PCB_WallSwitch_Core.PcbDoc   9. 5. 2022  5:14:17
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : PCB_WallSwitch_Core.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      8mil (0.201mm)                                            Round             6         PTH        0.22inch (5.50mm)
+T2      12mil (0.3mm)                                             Round             58        PTH        8.43inch (214.22mm)
+T3      35mil (0.899mm)                                           Round             3         PTH        0.16inch (4.00mm)
+T4      40mil (1.021mm)                                           Round             32        PTH        5.44inch (138.18mm)
+T5      108mil (2.751mm)                                          Round             4         NPTH       3.86inch (98.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              103
+
+Total Processing Time (hh:mm:ss) : 00:00:00

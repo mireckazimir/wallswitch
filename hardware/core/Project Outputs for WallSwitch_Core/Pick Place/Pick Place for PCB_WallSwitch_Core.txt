@@ -1,0 +1,49 @@
+Altium Designer Pick and Place Locations
+F:\FIT VUT\=DP2=\WallSwitch\WallSwitch_1\Project Outputs for WallSwitch_Core\Pick Place\Pick Place for PCB_WallSwitch_Core.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/05/22
+Time:       04:29
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment             Layer       Footprint                       Center-X(mil) Center-Y(mil) Rotation Description                                                                                                 
+U1         ESP32-WROOM-32D-N16 TopLayer    FP-ESP32-WROOM-32D_16MB-MFG     -807.087      1077.953      0        "Bluetooth and Wi-Fi Module
+2.4GHz to 2.5GHz 2.7V to 3.6V 16MB Flash
+38-Pin SMD Module"                   
+RDP        ERJ-P06F27R0V       BottomLayer RES_ERJP06F27R0V                -417.323      236.220       0        "Res Thick Film 0805 27 Ohm 1% 0.25W ±300ppm/°C Molded SMD Punched Carrier T/R"                             
+RDM        ERJ-P06F27R0V       BottomLayer RES_ERJP06F27R0V                -417.323      322.835       0        "Res Thick Film 0805 27 Ohm 1% 0.25W ±300ppm/°C Molded SMD Punched Carrier T/R"                             
+FB1        74279202            BottomLayer SMD-0805                        -515.748      444.882       0        "Ferrite SMD Construction form: 0805 DC resistance: 0.1 Ohm Impedance @ 100 MHz: 120 Ohm"                   
+CP         C0805C470J5RACTU    TopLayer    FP-C0805C-DN-IPC_A              -606.299      19.685        270      "47.0Pf 50.0V Rohs Compliant: Yes"                                                                          
+CM         C0805C470J5RACTU    TopLayer    FP-C0805C-DN-IPC_A              -500.000      19.685        270      "47.0Pf 50.0V Rohs Compliant: Yes"                                                                          
+C9         C0805C104K5RAC7411  BottomLayer FP-C0805C-DN-IPC_A              -744.095      551.181       180      "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                                                    
+C8         C0805C103J5RAC7025  BottomLayer FP-C0805C-DN-IPC_A              -744.095      444.882       180      "Cap Ceramic 0.01uF 50V X7R 5% SMD 0805 125°C Paper T/R"                                                    
+C6         C0805C104K5RAC7411  TopLayer    FP-C0805C-DN-IPC_A              -708.661      488.189       90       "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                                                    
+Q1         SS8050-G            BottomLayer FP-SS8050-G-IPC_A               -370.079      1322.835      90       "Trans Gp Bjt NPN 25V 1.5A 300MW 3-PIN SOT-23 T/r"                                                          
+P2         SSQ-108-03-G-D      BottomLayer SAMTEC_SSQ-108-XX-X-D           -122.047      748.032       90       "Headers & Wire Housings Tiger Buy Socket Strip with Square Tails, 0.100 Pitch"                             
+P1         SSQ-108-03-G-D      BottomLayer SAMTEC_SSQ-108-XX-X-D           -1492.126     748.032       90       "Headers & Wire Housings Tiger Buy Socket Strip with Square Tails, 0.100 Pitch"                             
+J2         M22-2510346         BottomLayer HDRV3W50P0X200_1X3_600X200X525P -1372.047     0.000         180      "2.00mm (0.079") Pitch SIL Vertical 2.4mm PC Tail Pin Header, 3.5mm mating pin height, tin, 3 contacts"     
+U4         TPS76733QPWPRQ1     TopLayer    PWP0020L_L                      -1159.449     375.984       0        "Automotive 1-A, 10-V, low-dropout voltage regulator with enable 20-HTSSOP -40 to 125"                      
+U3         RCLAMP0502A.TCT     TopLayer    SOTFL50P162X60-6N               -787.402      192.913       180      "TVS??? 5V IPPM=3A 50W ??"                                                                                  
+U2         FT231XS-U           TopLayer    SSOP-20_L                       -460.630      401.575       0        "FT231XS-U, Usb Controller, 3MBD, Usb 1.1, Usb 2.0, 5 V, 20-PIN SSOP"                                       
+RST        SKRKAHE020          BottomLayer SKRKAEE020                      -533.465      33.465        270      "Switch Tactile N.O. SPST Round Button Gull Wing 0.05A 12VDC 0.98N SMD T/R"                                 
+R12        ERJ-6ENF2493V       BottomLayer RESC2013X70X40NL20T20           -919.291      460.630       90       "Res Thick Film 0805 249K Ohm 1% 1/8W ±100ppm/°C Molded SMD Punched Carrier T/R"                            
+R6         ERJ-UP6J103V        BottomLayer RESC2012X70N                    -409.449      1155.512      270      "Res 10K Ohm 5% 1/2W 0805"                                                                                  
+R5         ERJ-UP6J103V        BottomLayer RESC2012X70N                    -330.709      1155.512      90       "Res 10K Ohm 5% 1/2W 0805"                                                                                  
+R3         ERJ-3GEYJ102V       BottomLayer FP-ERJ3G-IPC_A                  -641.732      1031.496      270      "RES SMD 1K OHM 5% 1/10W 0603"                                                                              
+R2         ERJ-3GEYJ102V       BottomLayer FP-ERJ3G-IPC_A                  -555.118      1031.496      270      "RES SMD 1K OHM 5% 1/10W 0603"                                                                              
+R1         ERJ-UP6J103V        BottomLayer RESC2012X70N                    -1289.370     1188.976      90       "Res 10K Ohm 5% 1/2W 0805"                                                                                  
+Q2         SS8050-G            BottomLayer FP-SS8050-G-IPC_A               -370.079      988.189       270      "Trans Gp Bjt NPN 25V 1.5A 300MW 3-PIN SOT-23 T/r"                                                          
+J1         10104110-0001LF     TopLayer    101041100001LF                  -905.512      22.638        0        "Conn Micro USB 2.0 Type B RCP 5 POS 0.65mm Solder RA SMD 5 Terminal 1 Port T/R"                            
+C18        T495A156K010ATE1K0  TopLayer    CAPPM3216X180N                  -911.417      476.378       90       "Cap Tant Solid 15uF 10V A CASE 10% (3.2 X 1.6 X 1.6mm) Inward L SMD 3216-18 1 Ohm 125C Automotive T/R"     
+C17        C0805C473K5RACAUTO  TopLayer    FP-C0805C-DN-IPC_A              -1283.465     143.701       0        "KEMET   C0805C473K5RACAUTO   Multilayer Ceramic Capacitor, AEC-Q200 MLCC Series, 0.047 F,  10%, X7R, 50 V" 
+C7         GRM21BR71C475KE51L  TopLayer    FP-GRM21B-0_15-IPC_A            -814.961      488.189       90       "Cap Ceramic 4.7uF 16V X7R 10% SMD 0805 125°C Embossed Plastic T/R"                                         
+C5         C0805C104K5RAC7411  TopLayer    FP-C0805C-DN-IPC_A              -287.402      19.685        270      "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                                                    
+C4         C0805C104K5RAC7411  TopLayer    FP-C0805C-DN-IPC_A              -393.701      19.685        270      "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                                                    
+C3         C0805C104K5RAC7411  BottomLayer FP-C0805C-DN-IPC_A              -1289.370     1358.268      90       "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                                                    
+C2         C0805C104K5RAC7411  TopLayer    FP-C0805C-DN-IPC_A              -1301.181     1362.205      90       "Cap Ceramic 0.1uF 50V X7R 10% SMD 0805 125°C Paper T/R"                                                    
+C1         GRM21BR61A226ME51L  TopLayer    FP-GRM21B-0_15-IPC_A            -1301.181     1185.039      270      "????(MLCC) 22µF ±20% 10V X5R 0805"                                                                         
+BOOT       SKRKAHE020          BottomLayer SKRKAEE020                      -338.583      33.465        270      "Switch Tactile N.O. SPST Round Button Gull Wing 0.05A 12VDC 0.98N SMD T/R"                                 
